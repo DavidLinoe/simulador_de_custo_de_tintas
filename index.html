@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Custo de Tinta</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Simulador de Custo de Tinta</h1>
+
+    <form id="formulario">
+      <label for="area">Área a ser pintada (em metros quadrados):</label>
+      <input
+        type="number"
+        id="area"
+        onchange="calcularCusto()"
+        n
+        ame="area"
+        required
+      />
+
+      <label for="tinta">Escolha a diluicao </label>
+      <select id="diluicao" name="diluicao" onchange="calcularCusto()">
+        <option value="5">1 litro para 5 metros quadrados</option>
+        <option value="6">1 litro para 6 metros quadrados</option>
+        <option value="7">1 litro para 7 metros quadrados</option>
+        <option value="8">1 litro para 8 metros quadrados</option>
+        <option value="9">1 litro para 8 metros quadrados</option>
+        <option value="10">1 litro para 10 metros quadrados</option>
+      </select>
+
+      <label for="tinta">Demãos </label>
+      <select id="demaos" name="demaos" onchange="calcularCusto()">
+        <option value="1">Uma demão</option>
+        <option value="2">Duas demãos</option>
+        <option value="3">Tres demãos</option>
+        <option value="4">Quatro demãos</option>
+      </select>
+
+      <label for="tinta">Escolha a tinta: 18 litros </label>
+      <select id="tinta" name="tinta" onchange="calcularCusto()">
+        <option value="120">Tinta Base Agua - R$120,00</option>
+        <option value="279">Tinta Base Oleo - R$279,00</option>
+        <option value="189">Tinta Acrilica - R$189,00</option>
+        <option value="430">Tinta Sintetica- R$430,00</option>
+        <option value="520">Tinta Emborrachada- R$520,00</option>
+      </select>
+    </form>
+
+    <div id="resultado"></div>
+    <div id="resultadoLata"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
